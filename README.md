@@ -16,7 +16,6 @@
 <code><img width="5%" title="IntelliJ IDEA" src="images/logo/Idea.svg"></code>
 <code><img width="5%" title="Java" src="images/logo/Java.svg"></code>
 <code><img width="5%" title="Selenoid" src="images/logo/RestAssured.svg"></code>
-<code><img width="5%" title="Selenide" src="images/logo/Selenide.svg"></code>
 <code><img width="5%" title="Gradle" src="images/logo/Gradle.svg"></code>
 <code><img width="5%" title="Junit5" src="images/logo/Junit5.svg"></code>
 <code><img width="5%" title="GitHub" src="images/logo/GitHub.svg"></code>
