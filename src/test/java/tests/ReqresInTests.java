@@ -14,7 +14,7 @@ import static spec.Specs.responseSpec200;
 public class ReqresInTests extends TestBase {
 
     @Test
-    @DisplayName("Checking email with Groovy")
+    @DisplayName("Проверка email, при помощи Groovy")
     void checkEmailWithGroovy() {
         given()
                 .spec(request)
@@ -28,7 +28,7 @@ public class ReqresInTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Successful registration")
+    @DisplayName("Успешная регистрация")
     void successfulRegister() {
 
         User user = new User();
@@ -50,7 +50,7 @@ public class ReqresInTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Successful authorization")
+    @DisplayName("Успешная авторизация")
     void successfulLogin() {
         User user = new User();
         user.setEmail("eve.holt@reqres.in");
@@ -70,7 +70,7 @@ public class ReqresInTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Unsuccessful authorization")
+    @DisplayName("Неуспешная авторизация")
     void unsuccessfulLogin() {
         User user = new User();
         user.setEmail("peter@klaven");
@@ -89,7 +89,7 @@ public class ReqresInTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Create a new user")
+    @DisplayName("Создание нового пользователя")
     void createUser() {
         User user = new User();
         user.setName("morpheus");
@@ -109,7 +109,7 @@ public class ReqresInTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Update user data")
+    @DisplayName("Обновление данных пользователя")
     void updateUser() {
         User user = new User();
         user.setName("morpheus");
@@ -129,7 +129,7 @@ public class ReqresInTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Search user")
+    @DisplayName("Поиск пользователя")
     void singleUser() {
 
         LombokUserData response = given()
