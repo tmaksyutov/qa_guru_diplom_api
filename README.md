@@ -8,6 +8,7 @@
 - [Запуск тестов в Jenkins](#-запуск-тестов-в-jenkins)
 - [Отчет о результатах тестирования в Allure Report](#-отчет-о-результатах-тестирования-в-Allure-report)
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
+- - [Уведомления в Telegram с использованием бота](#-уведомления-в-telegram-с-использованием-бота)
 
 
 ## :technologist: Технологии и инструменты
@@ -83,3 +84,9 @@ gradle clean test
 <p align="center">
   <img src="images/screenshot/allure-testops-testcases.png" alt="testcase" width="900">
 </p>
+
+## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
+
+<p align="center">
+<img title="Telegram Notifications" src="images/screenshot/notification.png">
