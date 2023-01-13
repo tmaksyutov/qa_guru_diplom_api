@@ -3,6 +3,7 @@ package tests;
 import models.LombokUserData;
 import models.User;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -13,6 +14,7 @@ import static spec.Specs.responseSpec200;
 
 public class ReqresInTests extends TestBase {
 
+    @Tag("Api")
     @Test
     @DisplayName("Проверка email, при помощи Groovy")
     void checkEmailWithGroovy() {
@@ -27,6 +29,7 @@ public class ReqresInTests extends TestBase {
                         hasItems("eve.holt@reqres.in"));
     }
 
+    @Tag("Api")
     @Test
     @DisplayName("Успешная регистрация")
     void successfulRegister() {
@@ -49,6 +52,7 @@ public class ReqresInTests extends TestBase {
         assertEquals("QpwL5tke4Pnpja7X4", response.getToken());
     }
 
+    @Tag("Api")
     @Test
     @DisplayName("Успешная авторизация")
     void successfulLogin() {
@@ -69,6 +73,7 @@ public class ReqresInTests extends TestBase {
         assertEquals(response.getToken(), "QpwL5tke4Pnpja7X4");
     }
 
+    @Tag("Api")
     @Test
     @DisplayName("Неуспешная авторизация")
     void unsuccessfulLogin() {
@@ -88,6 +93,7 @@ public class ReqresInTests extends TestBase {
         assertEquals(response.getError(), "Missing password");
     }
 
+    @Tag("Api")
     @Test
     @DisplayName("Создание нового пользователя")
     void createUser() {
@@ -108,6 +114,7 @@ public class ReqresInTests extends TestBase {
         assertEquals(response.getJob(), user.getJob());
     }
 
+    @Tag("Api")
     @Test
     @DisplayName("Обновление данных пользователя")
     void updateUser() {
@@ -128,6 +135,7 @@ public class ReqresInTests extends TestBase {
         assertEquals(response.getJob(), user.getJob());
     }
 
+    @Tag("Api")
     @Test
     @DisplayName("Поиск пользователя")
     void singleUser() {
@@ -144,4 +152,5 @@ public class ReqresInTests extends TestBase {
         assertEquals("2", response.getUser().getId());
         assertEquals("janet.weaver@reqres.in", response.getUser().getEmail());
     }
+
 }
